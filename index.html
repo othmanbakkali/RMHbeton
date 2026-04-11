@@ -32,12 +32,12 @@
         </button>
       </div>
     </div>
-    <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-surface/98 backdrop-blur-md lg:hidden flex flex-col items-center justify-center gap-8">
-      <a href="#apropos" class="mobile-nav-link text-2xl font-display uppercase tracking-[0.15em] text-neutral-200 hover:text-brand-light transition-colors" data-section="apropos">À Propos</a>
-      <a href="#services" class="mobile-nav-link text-2xl font-display uppercase tracking-[0.15em] text-neutral-200 hover:text-brand-light transition-colors" data-section="services">Services</a>
-      <a href="#galerie" class="mobile-nav-link text-2xl font-display uppercase tracking-[0.15em] text-neutral-200 hover:text-brand-light transition-colors" data-section="galerie">Galerie</a>
-      <a href="#contact" class="mobile-nav-link text-2xl font-display uppercase tracking-[0.15em] text-neutral-200 hover:text-brand-light transition-colors" data-section="contact">Contact</a>
-      <a href="#contact" class="mt-4 px-8 py-3 bg-brand text-white text-sm uppercase tracking-[0.15em] font-semibold rounded-sm">Devis Gratuit</a>
+    <div id="mobileMenu" class="mobile-menu">
+      <a href="#apropos" class="mobile-nav-link" data-section="apropos">À Propos</a>
+      <a href="#services" class="mobile-nav-link" data-section="services">Services</a>
+      <a href="#galerie" class="mobile-nav-link" data-section="galerie">Galerie</a>
+      <a href="#contact" class="mobile-nav-link" data-section="contact">Contact</a>
+      <a href="#contact" class="px-8 py-3 bg-brand text-white text-sm uppercase tracking-[0.15em] font-semibold rounded-sm hover:bg-brand-light transition-colors" style="margin-top: 1rem;">Devis Gratuit</a>
     </div>
   </nav>
 
@@ -46,9 +46,9 @@
     <div class="hero-overlay absolute inset-0 z-[1]"></div>
     <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] glow-brand z-[1]"></div>
 
-    <div class="relative z-10 w-full max-w-7xl mx-auto px-5 md:px-8 pt-20">
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-5 md:px-8 pt-16 sm:pt-20">
       <!-- Badge moved to TOP LEFT -->
-      <div class="absolute top-24 left-5 md:left-8" style="animation: revealUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.1s both;">
+      <div class="absolute top-16 sm:top-24 left-5 md:left-8" style="animation: revealUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.1s both;">
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
           <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
           <span class="text-xs uppercase tracking-[0.15em] text-neutral-300 font-medium">Tanger, Maroc</span>
@@ -57,7 +57,7 @@
 
       <!-- Title centered -->
       <div class="text-center">
-        <h1 class="font-display uppercase text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-500 leading-[0.9] tracking-tight mb-6" style="animation: revealUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.2s both;">
+        <h1 class="font-display uppercase text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-500 leading-[0.9] tracking-tight mb-6" style="animation: revealUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.2s both;">
           <span class="text-white">Solutions</span><br>
           <span class="text-white">fiables en</span><br>
           <span class="text-brand-light">béton prêt</span><br>
@@ -91,7 +91,7 @@
   <!-- ===== STATS BAR ===== -->
   <section class="relative z-10 border-y border-white/5 bg-surface-2/80 backdrop-blur-sm">
     <div class="max-w-7xl mx-auto px-5 md:px-8 py-10 md:py-14">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
         <div class="text-center reveal stagger-1">
           <div class="stat-number font-display text-3xl md:text-4xl font-500" data-count="10">0+</div>
           <p class="text-neutral-500 text-xs uppercase tracking-[0.15em] mt-2">Années d'expérience</p>

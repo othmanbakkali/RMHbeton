@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RMH Beton Development — Béton Prêt à l'Emploi & Construction</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/3/3.1.0/iconify.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="noise">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="#hero" class="flex items-center gap-3 group">
+          <img src="assets/images/LOGO.jpeg" alt="RMH Beton" class="h-12 w-auto rounded transition-transform duration-300 group-hover:scale-105">
+        </a>
+        <div class="hidden lg:flex items-center gap-8">
+          <a href="#apropos" class="nav-link text-xs uppercase tracking-[0.2em] text-neutral-300 hover:text-brand-light transition-colors" data-section="apropos">À Propos</a>
+          <a href="#services" class="nav-link text-xs uppercase tracking-[0.2em] text-neutral-300 hover:text-brand-light transition-colors" data-section="services">Services</a>
+          <a href="#galerie" class="nav-link text-xs uppercase tracking-[0.2em] text-neutral-300 hover:text-brand-light transition-colors" data-section="galerie">Galerie</a>
+          <a href="#contact" class="nav-link text-xs uppercase tracking-[0.2em] text-neutral-300 hover:text-brand-light transition-colors" data-section="contact">Contact</a>
+          <a href="#contact" class="ml-4 px-6 py-2.5 bg-brand text-white text-xs uppercase tracking-[0.15em] font-semibold rounded-sm hover:bg-brand-light transition-colors duration-300">Devis Gratuit</a>
+        </div>
+        <button id="burger" class="lg:hidden flex flex-col gap-1.5 p-2 z-50" aria-label="Menu">
+          <span class="burger-line w-6 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+          <span class="burger-line w-6 h-0.5 bg-white transition-all duration-300"></span>
+          <span class="burger-line w-4 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="mobile-menu fixed inset-0 bg-surface/98 backdrop-blur-md lg:hidden flex flex-col items-center justify-center gap-8">
+      <a href="#apropos" class="mobile-nav-link text-2xl font-display uppercase tracking-[0.15em] text-neutral-200 hover:text-brand-light transition-colors" data-section="apropos">À Propos</a>
+      <a href="#services" class="mobile-nav-link text-2xl font-display uppercase tracking-[0.15em] text-neutral-200 hover:text-brand-light transition-colors" data-section="services">Services</a>
+      <a href="#galerie" class="mobile-nav-link text-2xl font-display uppercase tracking-[0.15em] text-neutral-200 hover:text-brand-light transition-colors" data-section="galerie">Galerie</a>
+      <a href="#contact" class="mobile-nav-link text-2xl font-display uppercase tracking-[0.15em] text-neutral-200 hover:text-brand-light transition-colors" data-section="contact">Contact</a>
+      <a href="#contact" class="mt-4 px-8 py-3 bg-brand text-white text-sm uppercase tracking-[0.15em] font-semibold rounded-sm">Devis Gratuit</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="relative min-h-screen flex items-center justify-center hero-bg">
+    <div class="hero-overlay absolute inset-0 z-[1]"></div>
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] glow-brand z-[1]"></div>
+
+    <div class="relative z-10 w-full max-w-7xl mx-auto px-5 md:px-8 pt-20">
+      <!-- Badge moved to TOP LEFT -->
+      <div class="absolute top-24 left-5 md:left-8" style="animation: revealUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.1s both;">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
+          <span class="w-2 h-2 rounded-full bg-brand animate-pulse"></span>
+          <span class="text-xs uppercase tracking-[0.15em] text-neutral-300 font-medium">Tanger, Maroc</span>
+        </div>
+      </div>
+
+      <!-- Title centered -->
+      <div class="text-center">
+        <h1 class="font-display uppercase text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-500 leading-[0.9] tracking-tight mb-6" style="animation: revealUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.2s both;">
+          <span class="text-white">Solutions</span><br>
+          <span class="text-white">fiables en</span><br>
+          <span class="text-brand-light">béton prêt</span><br>
+          <span class="text-white">à l'emploi</span>
+        </h1>
+
+        <p class="text-neutral-400 text-base md:text-lg font-light leading-relaxed max-w-2xl mx-auto mb-10" style="animation: revealUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.4s both;">
+          Votre partenaire de confiance pour la fabrication de produits de structure du béton et les travaux de construction générale.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center" style="animation: revealUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.5s both;">
+          <a href="#contact" class="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand text-white text-xs uppercase tracking-[0.2em] font-semibold rounded-sm hover:bg-brand-light transition-all duration-300">
+            Contactez-nous
+            <span class="iconify w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" data-icon="lucide:arrow-right"></span>
+          </a>
+          <a href="#services" class="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white text-xs uppercase tracking-[0.2em] font-semibold rounded-sm hover:border-brand/50 hover:text-brand-light transition-all duration-300">
+            Nos Services
+          </a>
+        </div>
+      </div>
+
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2" style="animation: revealUp 0.8s cubic-bezier(0.16,1,0.3,1) 0.8s both;">
+        <div class="flex flex-col items-center gap-2">
+          <span class="text-[10px] uppercase tracking-[0.3em] text-neutral-500">Défiler</span>
+          <div class="w-px h-8 bg-gradient-to-b from-brand to-transparent"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS BAR ===== -->
+  <section class="relative z-10 border-y border-white/5 bg-surface-2/80 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-5 md:px-8 py-10 md:py-14">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
+        <div class="text-center reveal stagger-1">
+          <div class="stat-number font-display text-3xl md:text-4xl font-500" data-count="10">0+</div>
+          <p class="text-neutral-500 text-xs uppercase tracking-[0.15em] mt-2">Années d'expérience</p>
+        </div>
+        <div class="text-center reveal stagger-2">
+          <div class="stat-number font-display text-3xl md:text-4xl font-500" data-count="500">0+</div>
+          <p class="text-neutral-500 text-xs uppercase tracking-[0.15em] mt-2">Projets réalisés</p>
+        </div>
+        <div class="text-center reveal stagger-3">
+          <div class="stat-number font-display text-3xl md:text-4xl font-500" data-count="15">0+</div>
+          <p class="text-neutral-500 text-xs uppercase tracking-[0.15em] mt-2">Camions béton</p>
+        </div>
+        <div class="text-center reveal stagger-4">
+          <div class="stat-number font-display text-3xl md:text-4xl font-500">24/7</div>
+          <p class="text-neutral-500 text-xs uppercase tracking-[0.15em] mt-2">Disponibilité</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== À PROPOS ===== -->
+  <section id="apropos" class="relative py-24 md:py-32 overflow-hidden">
+    <div class="absolute top-1/2 right-0 w-[500px] h-[500px] glow-brand opacity-30"></div>
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div class="reveal-left relative">
+          <div class="relative rounded-sm overflow-hidden aspect-[4/3]">
+            <img src="assets/images/faceoff.jpeg" alt="Flotte RMH Beton" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-surface/60 to-transparent"></div>
+          </div>
+          <div class="absolute -bottom-4 -right-4 w-24 h-24 border-2 border-brand/30 rounded-sm -z-10"></div>
+          <div class="absolute -top-4 -left-4 w-24 h-24 border-2 border-brand/20 rounded-sm -z-10"></div>
+        </div>
+        <div class="reveal-right">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="section-line"></div>
+            <span class="text-xs uppercase tracking-[0.25em] text-brand-light font-medium">À Propos</span>
+          </div>
+          <h2 class="font-display text-3xl md:text-5xl font-500 leading-tight tracking-tight mb-6">
+            L'excellence du <span class="text-brand-light">béton</span> au service de vos projets
+          </h2>
+          <p class="text-neutral-400 font-light leading-relaxed mb-6">
+            <strong class="text-neutral-200 font-medium">RMH Beton Development</strong> est une entreprise spécialisée dans la fabrication des produits de structure du béton prêt à l'emploi et les travaux de construction générale. Basée à Tanger, nous nous engageons à fournir des solutions fiables, durables et de haute qualité pour tous types de projets de construction.
+          </p>
+          <p class="text-neutral-400 font-light leading-relaxed mb-8">
+            Forts de notre expertise et de notre flotte moderne de camions béton et camions grue, nous garantissons un service professionnel, ponctuel et efficace. Notre engagement envers la satisfaction client fait de nous un partenaire de choix dans le secteur du BTP au Maroc.
+          </p>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <div class="flex items-start gap-3">
+              <div class="mt-1 w-5 h-5 rounded-full bg-brand/20 flex items-center justify-center flex-shrink-0">
+                <span class="iconify w-3 h-3 text-brand-light" data-icon="lucide:check"></span>
+              </div>
+              <span class="text-sm text-neutral-300">Professionnalisme confirmé</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="mt-1 w-5 h-5 rounded-full bg-brand/20 flex items-center justify-center flex-shrink-0">
+                <span class="iconify w-3 h-3 text-brand-light" data-icon="lucide:check"></span>
+              </div>
+              <span class="text-sm text-neutral-300">Fiabilité et ponctualité</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="mt-1 w-5 h-5 rounded-full bg-brand/20 flex items-center justify-center flex-shrink-0">
+                <span class="iconify w-3 h-3 text-brand-light" data-icon="lucide:check"></span>
+              </div>
+              <span class="text-sm text-neutral-300">Béton de qualité supérieure</span>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="mt-1 w-5 h-5 rounded-full bg-brand/20 flex items-center justify-center flex-shrink-0">
+                <span class="iconify w-3 h-3 text-brand-light" data-icon="lucide:check"></span>
+              </div>
+              <span class="text-sm text-neutral-300">Équipe qualifiée et expérimentée</span>
+            </div>
+          </div>
+          <a href="#contact" class="group inline-flex items-center gap-2 text-brand-light text-sm font-semibold uppercase tracking-[0.1em] hover:text-white transition-colors duration-300">
+            En savoir plus
+            <span class="iconify w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" data-icon="lucide:arrow-right"></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="relative py-24 md:py-32 bg-surface-2">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] glow-brand opacity-20"></div>
+    <div class="max-w-7xl mx-auto px-5 md:px-8 relative z-10">
+      <div class="text-center mb-16 md:mb-20">
+        <div class="flex items-center justify-center gap-4 mb-6 reveal">
+          <div class="section-line"></div>
+          <span class="text-xs uppercase tracking-[0.25em] text-brand-light font-medium">Services</span>
+          <div class="section-line"></div>
+        </div>
+        <h2 class="font-display text-3xl md:text-5xl lg:text-6xl font-500 leading-tight tracking-tight reveal stagger-1">
+          Ce que nous <span class="text-brand-light">offrons</span>
+        </h2>
+        <p class="text-neutral-400 font-light mt-4 max-w-xl mx-auto reveal stagger-2">
+          Des solutions complètes pour répondre à tous vos besoins en béton et construction.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="service-card bg-surface-3/60 rounded-sm p-8 md:p-10 reveal stagger-1">
+          <div class="service-icon w-14 h-14 rounded-sm bg-white/5 flex items-center justify-center mb-6 text-brand-light">
+            <span class="iconify w-7 h-7" data-icon="lucide:flask-conical"></span>
+          </div>
+          <h3 class="font-display text-xl md:text-2xl uppercase tracking-tight mb-4">Béton Prêt à l'Emploi</h3>
+          <p class="text-neutral-400 font-light leading-relaxed text-sm">
+            Fabrication et livraison de béton de haute qualité, formulé selon les normes marocaines et internationales. Différentes classes de résistance disponibles pour s'adapter à chaque projet.
+          </p>
+          <div class="mt-6 pt-6 border-t border-white/5">
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 text-[10px] uppercase tracking-wider bg-brand/10 text-brand-light rounded-full">C25/30</span>
+              <span class="px-3 py-1 text-[10px] uppercase tracking-wider bg-brand/10 text-brand-light rounded-full">C30/37</span>
+              <span class="px-3 py-1 text-[10px] uppercase tracking-wider bg-brand/10 text-brand-light rounded-full">Sur mesure</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-card bg-surface-3/60 rounded-sm p-8 md:p-10 reveal stagger-2">
+          <div class="service-icon w-14 h-14 rounded-sm bg-white/5 flex items-center justify-center mb-6 text-brand-light">
+            <span class="iconify w-7 h-7" data-icon="lucide:truck"></span>
+          </div>
+          <h3 class="font-display text-xl md:text-2xl uppercase tracking-tight mb-4">Transport par Camions Béton</h3>
+          <p class="text-neutral-400 font-light leading-relaxed text-sm">
+            Flotte moderne de camions toupie assurant la livraison rapide et efficace du béton frais sur vos chantiers. Respect des délais et maintien de la qualité du béton pendant le transport.
+          </p>
+          <div class="mt-6 pt-6 border-t border-white/5">
+            <div class="flex items-center gap-3 text-neutral-500 text-xs">
+              <span class="iconify w-4 h-4" data-icon="lucide:clock"></span>
+              <span>Livraison rapide dans la région de Tanger</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-card bg-surface-3/60 rounded-sm p-8 md:p-10 reveal stagger-3">
+          <div class="service-icon w-14 h-14 rounded-sm bg-white/5 flex items-center justify-center mb-6 text-brand-light">
+            <span class="iconify w-7 h-7" data-icon="lucide:move-vertical"></span>
+          </div>
+          <h3 class="font-display text-xl md:text-2xl uppercase tracking-tight mb-4">Services de Levage</h3>
+          <p class="text-neutral-400 font-light leading-relaxed text-sm">
+            Camions grue disponibles pour les opérations de levage sur chantier. Manutention précise et sécurisée des matériaux et équipements de construction.
+          </p>
+          <div class="mt-6 pt-6 border-t border-white/5">
+            <div class="flex items-center gap-3 text-neutral-500 text-xs">
+              <span class="iconify w-4 h-4" data-icon="lucide:shield-check"></span>
+              <span>Opérations sécurisées par des professionnels</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-card bg-surface-3/60 rounded-sm p-8 md:p-10 reveal stagger-4">
+          <div class="service-icon w-14 h-14 rounded-sm bg-white/5 flex items-center justify-center mb-6 text-brand-light">
+            <span class="iconify w-7 h-7" data-icon="lucide:hard-hat"></span>
+          </div>
+          <h3 class="font-display text-xl md:text-2xl uppercase tracking-tight mb-4">Travaux de Construction Générale</h3>
+          <p class="text-neutral-400 font-light leading-relaxed text-sm">
+            Réalisation complète de projets de construction : fondations, dalles, poteaux, voiles et ouvrages divers. Du petit chantier au grand projet, nous accompagnons chaque étape.
+          </p>
+          <div class="mt-6 pt-6 border-t border-white/5">
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 text-[10px] uppercase tracking-wider bg-brand/10 text-brand-light rounded-full">Fondations</span>
+              <span class="px-3 py-1 text-[10px] uppercase tracking-wider bg-brand/10 text-brand-light rounded-full">Dalles</span>
+              <span class="px-3 py-1 text-[10px] uppercase tracking-wider bg-brand/10 text-brand-light rounded-full">Ouvrages</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALERIE ===== -->
+  <section id="galerie" class="relative py-24 md:py-32">
+    <div class="max-w-7xl mx-auto px-5 md:px-8">
+      <div class="text-center mb-16 md:mb-20">
+        <div class="flex items-center justify-center gap-4 mb-6 reveal">
+          <div class="section-line"></div>
+          <span class="text-xs uppercase tracking-[0.25em] text-brand-light font-medium">Galerie</span>
+          <div class="section-line"></div>
+        </div>
+        <h2 class="font-display text-3xl md:text-5xl lg:text-6xl font-500 leading-tight tracking-tight reveal stagger-1">
+          Notre <span class="text-brand-light">flotte</span> & projets
+        </h2>
+        <p class="text-neutral-400 font-light mt-4 max-w-xl mx-auto reveal stagger-2">
+          Découvrez nos véhicules et réalisations qui témoignent de notre capacité opérationnelle.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="gallery-item rounded-sm aspect-[4/3] lg:col-span-2 lg:row-span-2 lg:aspect-auto reveal-scale stagger-1">
+          <img src="assets/images/wide.jpeg" alt="Flotte de camions RMH" class="w-full h-full object-cover rounded-sm">
+          <div class="gallery-overlay rounded-sm"></div>
+          <div class="gallery-text">
+            <h4 class="font-display text-lg uppercase tracking-tight">Notre Parc de Véhicules</h4>
+            <p class="text-neutral-400 text-sm mt-1">Camions béton et matériel spécialisé</p>
+          </div>
+        </div>
+        <div class="gallery-item rounded-sm aspect-[4/3] reveal-scale stagger-2">
+          <img src="assets/images/faceoff.jpeg" alt="Camion RMH" class="w-full h-full object-cover rounded-sm">
+          <div class="gallery-overlay rounded-sm"></div>
+          <div class="gallery-text">
+            <h4 class="font-display text-lg uppercase tracking-tight">Camion Béton RMH</h4>
+            <p class="text-neutral-400 text-sm mt-1">Prêt pour la livraison</p>
+          </div>
+        </div>
+        <div class="gallery-item rounded-sm aspect-[4/3] reveal-scale stagger-3">
+          <img src="assets/images/COVER.png" alt="Station de béton" class="w-full h-full object-cover rounded-sm">
+          <div class="gallery-overlay rounded-sm"></div>
+          <div class="gallery-text">
+            <h4 class="font-display text-lg uppercase tracking-tight">Station de Béton</h4>
+            <p class="text-neutral-400 text-sm mt-1">Notre centre de production</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="relative py-20 md:py-28 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-brand-deep/40 via-surface to-surface"></div>
+    <div class="absolute inset-0 glow-brand opacity-30"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-5 md:px-8 text-center">
+      <h2 class="font-display text-3xl md:text-5xl font-500 leading-tight tracking-tight mb-6 reveal">
+        Un projet de <span class="text-brand-light">construction</span> ?
+      </h2>
+      <p class="text-neutral-400 font-light max-w-xl mx-auto mb-10 reveal stagger-1">
+        Contactez-nous dès maintenant pour un devis gratuit et personnalisé. Notre équipe est à votre écoute pour concrétiser vos projets.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center reveal stagger-2">
+        <a href="tel:+212660720686" class="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand text-white text-xs uppercase tracking-[0.2em] font-semibold rounded-sm hover:bg-brand-light transition-all duration-300">
+          <span class="iconify w-4 h-4" data-icon="lucide:phone"></span>
+          Appelez-nous
+        </a>
+        <a href="mailto:rmh.beton@gmail.com" class="inline-flex items-center justify-center gap-2 px-8 py-4 border border-white/20 text-white text-xs uppercase tracking-[0.2em] font-semibold rounded-sm hover:border-brand/50 hover:text-brand-light transition-all duration-300">
+          <span class="iconify w-4 h-4" data-icon="lucide:mail"></span>
+          Envoyez un email
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="relative py-24 md:py-32 bg-surface-2">
+    <div class="absolute bottom-0 left-0 w-[500px] h-[500px] glow-brand opacity-20"></div>
+    <div class="max-w-7xl mx-auto px-5 md:px-8 relative z-10">
+      <div class="text-center mb-16 md:mb-20">
+        <div class="flex items-center justify-center gap-4 mb-6 reveal">
+          <div class="section-line"></div>
+          <span class="text-xs uppercase tracking-[0.25em] text-brand-light font-medium">Contact</span>
+          <div class="section-line"></div>
+        </div>
+        <h2 class="font-display text-3xl md:text-5xl lg:text-6xl font-500 leading-tight tracking-tight reveal stagger-1">
+          Parlons de votre <span class="text-brand-light">projet</span>
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 lg:gap-16">
+        <div class="lg:col-span-2 reveal-left">
+          <div class="space-y-8">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-sm bg-brand/10 flex items-center justify-center flex-shrink-0">
+                <span class="iconify w-5 h-5 text-brand-light" data-icon="lucide:map-pin"></span>
+              </div>
+              <div>
+                <h4 class="font-display text-sm uppercase tracking-[0.1em] mb-1">Adresse</h4>
+                <p class="text-neutral-400 text-sm font-light leading-relaxed">Sebt Zinnat, Rue Gouaret Nº238,<br>Tanger, Maroc</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-sm bg-brand/10 flex items-center justify-center flex-shrink-0">
+                <span class="iconify w-5 h-5 text-brand-light" data-icon="lucide:phone"></span>
+              </div>
+              <div>
+                <h4 class="font-display text-sm uppercase tracking-[0.1em] mb-1">Téléphone</h4>
+                <a href="tel:+212660720686" class="text-neutral-400 text-sm font-light hover:text-brand-light transition-colors">+212 660 720 686</a>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-sm bg-brand/10 flex items-center justify-center flex-shrink-0">
+                <span class="iconify w-5 h-5 text-brand-light" data-icon="lucide:mail"></span>
+              </div>
+              <div>
+                <h4 class="font-display text-sm uppercase tracking-[0.1em] mb-1">Email</h4>
+                <a href="mailto:rmh.beton@gmail.com" class="text-neutral-400 text-sm font-light hover:text-brand-light transition-colors">rmh.beton@gmail.com</a>
+              </div>
+            </div>
+            <div class="pt-6 border-t border-white/5">
+              <h4 class="font-display text-sm uppercase tracking-[0.1em] mb-4">Réseaux Sociaux</h4>
+              <div class="flex items-center gap-3">
+                <a href="https://www.facebook.com/profile.php?id=61573252205692" target="_blank" rel="noopener" class="w-10 h-10 rounded-sm bg-white/5 flex items-center justify-center text-neutral-400 hover:bg-brand hover:text-white transition-all duration-300" aria-label="Facebook">
+                  <span class="iconify w-4 h-4" data-icon="lucide:facebook"></span>
+                </a>
+                <a href="https://www.instagram.com/rmh.beton/" target="_blank" rel="noopener" class="w-10 h-10 rounded-sm bg-white/5 flex items-center justify-center text-neutral-400 hover:bg-brand hover:text-white transition-all duration-300" aria-label="Instagram">
+                  <span class="iconify w-4 h-4" data-icon="lucide:instagram"></span>
+                </a>
+                <div class="w-10 h-10 rounded-sm bg-white/5 flex items-center justify-center text-neutral-600 cursor-not-allowed relative group" title="Bientôt disponible">
+                  <span class="iconify w-4 h-4" data-icon="simple-icons:tiktok"></span>
+                  <span class="absolute -top-8 left-1/2 -translate-x-1/2 text-[10px] text-neutral-500 bg-surface-4 px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Bientôt disponible</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-3 reveal-right">
+          <form id="contactForm" class="bg-surface-3/60 border border-white/5 rounded-sm p-8 md:p-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 mb-5">
+              <div>
+                <label class="block text-xs uppercase tracking-[0.15em] text-neutral-400 mb-2">Nom complet *</label>
+                <input type="text" name="name" required class="w-full bg-surface border border-white/10 rounded-sm px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-brand/50 transition-colors" placeholder="Votre nom">
+              </div>
+              <div>
+                <label class="block text-xs uppercase tracking-[0.15em] text-neutral-400 mb-2">Téléphone *</label>
+                <input type="tel" name="phone" required class="w-full bg-surface border border-white/10 rounded-sm px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-brand/50 transition-colors" placeholder="+212 6XX XXX XXX">
+              </div>
+            </div>
+            <div class="mb-5">
+              <label class="block text-xs uppercase tracking-[0.15em] text-neutral-400 mb-2">Email</label>
+              <input type="email" name="email" class="w-full bg-surface border border-white/10 rounded-sm px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-brand/50 transition-colors" placeholder="votre@email.com">
+            </div>
+            <div class="mb-5">
+              <label class="block text-xs uppercase tracking-[0.15em] text-neutral-400 mb-2">Service souhaité</label>
+              <select name="service" class="w-full bg-surface border border-white/10 rounded-sm px-4 py-3 text-sm text-neutral-400 focus:outline-none focus:border-brand/50 transition-colors appearance-none cursor-pointer">
+                <option value="">Sélectionnez un service</option>
+                <option value="beton">Béton prêt à l'emploi</option>
+                <option value="transport">Transport par camions béton</option>
+                <option value="levage">Services de levage</option>
+                <option value="construction">Travaux de construction générale</option>
+              </select>
+            </div>
+            <div class="mb-8">
+              <label class="block text-xs uppercase tracking-[0.15em] text-neutral-400 mb-2">Message *</label>
+              <textarea name="message" required rows="5" class="w-full bg-surface border border-white/10 rounded-sm px-4 py-3 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-brand/50 transition-colors resize-none" placeholder="Décrivez votre projet..."></textarea>
+            </div>
+            <button type="submit" class="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand text-white text-xs uppercase tracking-[0.2em] font-semibold rounded-sm hover:bg-brand-light transition-all duration-300">
+              Envoyer le message
+              <span class="iconify w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" data-icon="lucide:send"></span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="relative border-t border-white/5 bg-surface">
+    <div class="max-w-7xl mx-auto px-5 md:px-8 py-16">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+        <div class="md:col-span-2">
+          <img src="assets/images/LOGO.jpeg" alt="RMH Beton" class="h-14 w-auto rounded mb-4">
+          <p class="text-neutral-500 text-sm font-light leading-relaxed max-w-sm">
+            Spécialisés dans la fabrication de produits de structure du béton prêt à l'emploi et les travaux de construction générale à Tanger.
+          </p>
+        </div>
+        <div>
+          <h4 class="font-display text-xs uppercase tracking-[0.2em] text-neutral-300 mb-5">Navigation</h4>
+          <ul class="space-y-3">
+            <li><a href="#hero" class="text-neutral-500 text-sm hover:text-brand-light transition-colors">Accueil</a></li>
+            <li><a href="#apropos" class="text-neutral-500 text-sm hover:text-brand-light transition-colors">À Propos</a></li>
+            <li><a href="#services" class="text-neutral-500 text-sm hover:text-brand-light transition-colors">Services</a></li>
+            <li><a href="#galerie" class="text-neutral-500 text-sm hover:text-brand-light transition-colors">Galerie</a></li>
+            <li><a href="#contact" class="text-neutral-500 text-sm hover:text-brand-light transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="font-display text-xs uppercase tracking-[0.2em] text-neutral-300 mb-5">Contact</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2 text-neutral-500 text-sm">
+              <span class="iconify w-4 h-4 mt-0.5 flex-shrink-0 text-brand/60" data-icon="lucide:map-pin"></span>
+              Sebt Zinnat, Rue Gouaret Nº238, Tanger
+            </li>
+            <li>
+              <a href="tel:+212660720686" class="flex items-center gap-2 text-neutral-500 text-sm hover:text-brand-light transition-colors">
+                <span class="iconify w-4 h-4 flex-shrink-0 text-brand/60" data-icon="lucide:phone"></span>
+                +212 660 720 686
+              </a>
+            </li>
+            <li>
+              <a href="mailto:rmh.beton@gmail.com" class="flex items-center gap-2 text-neutral-500 text-sm hover:text-brand-light transition-colors">
+                <span class="iconify w-4 h-4 flex-shrink-0 text-brand/60" data-icon="lucide:mail"></span>
+                rmh.beton@gmail.com
+              </a>
+            </li>
+          </ul>
+          <div class="flex items-center gap-3 mt-5">
+            <a href="https://www.facebook.com/profile.php?id=61573252205692" target="_blank" rel="noopener" class="w-9 h-9 rounded-sm bg-white/5 flex items-center justify-center text-neutral-500 hover:bg-brand hover:text-white transition-all duration-300" aria-label="Facebook">
+              <span class="iconify w-4 h-4" data-icon="lucide:facebook"></span>
+            </a>
+            <a href="https://www.instagram.com/rmh.beton/" target="_blank" rel="noopener" class="w-9 h-9 rounded-sm bg-white/5 flex items-center justify-center text-neutral-500 hover:bg-brand hover:text-white transition-all duration-300" aria-label="Instagram">
+              <span class="iconify w-4 h-4" data-icon="lucide:instagram"></span>
+            </a>
+            <a href="https://www.tiktok.com/@rmh.beton" target="_blank" rel="noopener" class="w-10 h-10 rounded-sm bg-white/5 flex items-center justify-center text-neutral-400 hover:bg-brand hover:text-white transition-all duration-300" aria-label="TikTok">
+                <span class="iconify w-4 h-4" data-icon="simple-icons:tiktok"></span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-neutral-600 text-xs">© <span id="year"></span> RMH Beton Development. Tous droits réservés.</p>
+        <p class="text-neutral-700 text-xs">Tanger, Maroc</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== FLOATING WHATSAPP BUTTON ===== -->
+  <a href="https://wa.me/212660720686" target="_blank" rel="noopener" class="floating-btn fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-whatsapp text-white flex items-center justify-center shadow-lg shadow-whatsapp/30 hover:bg-whatsapp-dark hover:shadow-whatsapp/50 transition-all duration-300" aria-label="WhatsApp">
+    <span class="iconify w-7 h-7" data-icon="lucide:message-circle"></span>
+  </a>
+
+  <!-- ===== TOAST ===== -->
+  <div id="toast" class="toast fixed bottom-24 left-1/2 -translate-x-1/2 z-[100] px-6 py-3 bg-brand text-white text-sm rounded-lg shadow-xl flex items-center gap-2 pointer-events-none">
+    <span class="iconify w-4 h-4" data-icon="lucide:check-circle"></span>
+    <span id="toastMsg">Message envoyé avec succès !</span>
+  </div>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script src="assets/js/script.js" defer></script>
+</body>
+</html>

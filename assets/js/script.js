@@ -189,32 +189,37 @@ window.addEventListener('resize', () => {
       toast.classList.add('show');
       setTimeout(() => toast.classList.remove('show'), 3500);
     }
-
-    // Contact form
-    document.getElementById('contactForm').addEventListener('submit', (e) => {
-      e.preventDefault();
-      const form = e.target;
-      const name = form.name.value.trim();
-      const phone = form.phone.value.trim();
-      const message = form.message.value.trim();
-
-      if (!name || !phone || !message) {
-        showToast('Veuillez remplir tous les champs obligatoires.');
-        return;
-      }
-
-      const btn = form.querySelector('button[type="submit"]');
-      const originalText = btn.innerHTML;
-      btn.innerHTML = '<span class="iconify w-4 h-4 animate-spin" data-icon="lucide:loader-2"></span> Envoi en cours...';
-      btn.disabled = true;
-
-      setTimeout(() => {
-        showToast('Message envoyé avec succès ! Nous vous contacterons bientôt.');
-        form.reset();
-        btn.innerHTML = originalText;
-        btn.disabled = false;
-      }, 1500);
+    //contact
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  
+  const btn = form.querySelector('button[type="submit"]');
+  const originalText = btn.innerHTML;
+  btn.innerHTML = '<span class="iconify w-4 h-4 animate-spin" data-icon="lucide:loader-2"></span> Envoi en cours...';
+  btn.disabled = true;
+  
+  try {
+    const response = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
     });
+    
+    if (response.ok) {
+      showToast('Message envoyé avec succès ! Nous vous contacterons bientôt.');
+      form.reset();
+    } else {
+      const data = await response.json();
+      showToast(data.error || 'Erreur lors de l\'envoi. Veuillez réessayer.');
+    }
+  } catch (error) {
+    showToast('Erreur réseau. Vérifiez votre connexion.');
+  }
+  
+  btn.innerHTML = originalText;
+  btn.disabled = false;
+});
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
